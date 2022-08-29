@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItem_title"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/item_tv_title"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="4 sai lầm skincare khiến Da dầu càng thêm tệ Ngày hè"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/item_tv_content"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/item_tv_title"
+                app:layout_constraintLeft_toLeftOf="@+id/item_tv_title"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Barber cam kết phục vụ đúng giờ ....."
+                android:layout_margin="10dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

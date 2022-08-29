@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_login"
+    tools:context=".Fragment.Knowledge.KnowledgeFragment">
+
+    <TextView
+        android:id="@+id/knowledgeF_tv_knowledge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:text="Kiến thức"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/home_fragment_background">
+
+        <TextView
+            android:id="@+id/knowledgeF_tv_youNeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Bạn cần biết"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"/>
+        <LinearLayout
+            android:id="@+id/knowledgeF_layout_youNeed_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/knowledgeF_tv_youNeed"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xem thêm"
+                android:textColor="@color/blue_login"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/knowleadge_next_page"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/knowleadgeF_recyclerView_youNeed"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@+id/knowledgeF_tv_youNeed"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/knowledgeF_tv_hairTrending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/knowleadgeF_recyclerView_youNeed"
+            app:layout_constraintLeft_toLeftOf="@+id/knowledgeF_tv_youNeed"
+            android:layout_marginTop="20dp"
+            android:text="Xu hướng hot nhất"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"/>
+        <LinearLayout
+            android:id="@+id/knowledgeF_layout_hairTrending_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/knowledgeF_tv_hairTrending"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xem thêm"
+                android:textColor="@color/blue_login"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/knowleadge_next_page"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/knowleadgeF_recyclerView_hairTrending"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@+id/knowledgeF_layout_hairTrending_next"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

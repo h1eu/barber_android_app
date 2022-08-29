@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- loading fragment -->
+    <dimen name="loadingF_imv_width">338dp</dimen>
+    <dimen name="loadingF_imv_height">412dp</dimen>
+
+    <!-- login fragment -->
+
+        <!-- tv nameApp -->
+    <dimen name="loginF_tvNameApp_marginLeft">40dp</dimen>
+    <dimen name="loginF_tvNameApp_marginTop">20dp</dimen>
+    <dimen name="loginF_tvNameApp_textSize">68sp</dimen>
+
+        <!-- imv nameApp -->
+    <dimen name="loginF_imvNameApp_width">90dp</dimen>
+    <dimen name="loginF_imvNameApp_height">86dp</dimen>
+    <dimen name="loginF_imvNameApp_marginBot">15dp</dimen>
+
+        <!-- tv welcome -->
+    <dimen name="loginF_tvWelcome_marginTop">24dp</dimen>
+    <dimen name="loginF_tvWelcome_textSize">22sp</dimen>
+
+        <!-- edt username -->
+    <dimen name="loginF_edtUsername_width">319dp</dimen>
+    <dimen name="loginF_edtUsername_height">60dp</dimen>
+    <dimen name="loginF_edtUsername_marginTop">60dp</dimen>
+    <dimen name="loginF_edtUsername_radius">15dp</dimen>
+
+        <!-- edt password -->
+    <dimen name="loginF_edtPass_marginTop">20dp</dimen>
+
+        <!-- tv forgot pass -->
+    <dimen name="loginF_tvForgotPass_marginTop">16dp</dimen>
+    <dimen name="loginF_tvForgotPass_textSize">16sp</dimen>
+
+        <!-- btn login  -->
+    <dimen name="loginF_btnLogin_width">250dp</dimen>
+    <dimen name="loginF_btnLogin_height">46dp</dimen>
+    <dimen name="loginF_btnLogin_marginTop">13dp</dimen>
+    <dimen name="loginF_btnLogin_radius">25dp</dimen>
+    <dimen name="loginF_btnLogin_textSize">16sp</dimen>
+
+        <!-- imv barber -->
+    <dimen name="loginF_imvBarber_width">224dp</dimen>
+    <dimen name="loginF_imvBarber_height">267dp</dimen>
+
+        <!-- tv check register -->
+    <dimen name="loginF_tvCheckRes_marginTop">220dp</dimen>
+    <dimen name="loginF_tvCheckRes_textSize">16sp</dimen>
+
+        <!-- tv register -->
+    <dimen name="loginF_tvRes_marginTop">8dp</dimen>
+    <dimen name="loginF_tvRes_textSize">14sp</dimen>
+
+    <!-- login fragment -->
+
+</resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_login"
+    tools:context=".Fragment.Home.BarberMeetingFragment">
+
+    <ImageView
+        android:id="@+id/barberMeetingF_imv_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/arrow_back_white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/barberMeetingF_imv_back"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:gravity="center"
+        android:text="Đặt lịch cắt"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        />
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fillViewport="true">-->
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/home_fragment_background">
+
+        <ImageView
+            android:id="@+id/barberMeetingF_imv_pickStore"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pick_store"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:id="@+id/barberMeetingF_tv_pickStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/barberMeetingF_imv_pickStore"
+            app:layout_constraintLeft_toRightOf="@+id/barberMeetingF_imv_pickStore"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="Chọn cửa hàng"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/barberMeetingF_layout_pickStore"
+            android:layout_width="380dp"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@+id/barberMeetingF_tv_pickStore"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_imv_pickStore"
+            app:boxStrokeColor="@color/blue_login"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:hint="chọn cửa hàng">
+            <AutoCompleteTextView
+                android:id="@+id/barberMeetingF_autoText_pickStore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:inputType="none"
+                android:maxLines="1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/barberMeetingF_imv_pick_hairdresser"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pick_hairdresser"
+            app:layout_constraintTop_toBottomOf="@+id/barberMeetingF_layout_pickStore"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_imv_pickStore"
+            android:layout_marginTop="5dp"/>
+
+
+        <TextView
+            android:id="@+id/barberMeetingF_tv_pickHairdresser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/barberMeetingF_imv_pick_hairdresser"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_tv_pickStore"
+            android:layout_marginTop="2dp"
+            android:text="Chọn thợ cắt tóc"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/barberMeetingF_recyclerView_hairdresserList"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:layout_constraintTop_toBottomOf="@+id/barberMeetingF_tv_pickHairdresser"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_tv_pickHairdresser"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/barberMeetingF_imv_pickDay"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/barberMeetingF_recyclerView_hairdresserList"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_imv_pick_hairdresser"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/pick_day"/>
+
+        <TextView
+            android:id="@+id/barberMeetingF_tv_pickDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/barberMeetingF_imv_pickDay"
+            app:layout_constraintLeft_toRightOf="@+id/barberMeetingF_imv_pickDay"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="10dp"
+            android:text="Chọn ngày"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/barberMeetingF_tv_dayPicked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/barberMeetingF_imv_pickDay"
+            android:gravity="center"
+            android:text="Xin chọn 1 ngày"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/barberMeetingF_imv_pickHour"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/pick_hour"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/barberMeetingF_tv_dayPicked"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_imv_pickDay"/>
+
+        <TextView
+            android:id="@+id/barberMeetingF_tv_pickTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/barberMeetingF_imv_pickHour"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_tv_pickDay"
+            android:layout_marginTop="2dp"
+            android:text="Chọn giờ"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/barberMeetingF_tv_hourPicked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/barberMeetingF_imv_pickHour"
+            app:layout_constraintRight_toLeftOf="@+id/barberMeetingF_tv_pickTime"
+            android:gravity="center"
+            android:text="Xin chọn giờ"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/barberMeetingF_recyclerView_time"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:layout_constraintTop_toBottomOf="@+id/barberMeetingF_tv_pickTime"
+            app:layout_constraintLeft_toLeftOf="@+id/barberMeetingF_tv_pickTime"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/barberMeetingFcardView_meeting"
+            android:layout_width="@dimen/loginF_btnLogin_width"
+            android:layout_height="@dimen/loginF_btnLogin_height"
+            app:layout_constraintTop_toBottomOf="@id/barberMeetingF_recyclerView_time"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="@color/blue_login" >
+            <TextView
+                android:id="@+id/barberMeetingF_tv_meeting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Đặt lịch cắt tóc"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/loginF_btnLogin_textSize"
+                android:fontFamily="@font/roboto_medium"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </ScrollView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

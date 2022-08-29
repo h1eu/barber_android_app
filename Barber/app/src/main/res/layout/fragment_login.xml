@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white_background"
+    tools:context=".Fragment.LoginFragment">
+
+    <TextView
+        android:id="@+id/tv_nameApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/app_name"
+        android:layout_marginLeft="@dimen/loginF_tvNameApp_marginLeft"
+        android:layout_marginTop="@dimen/loginF_tvNameApp_marginTop"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/loginF_tvNameApp_textSize" />
+    <ImageView
+        android:layout_width="@dimen/loginF_imvNameApp_width"
+        android:layout_height="@dimen/loginF_imvNameApp_height"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_nameApp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_nameApp"
+        android:layout_marginBottom="@dimen/loginF_imvNameApp_marginBot"
+        android:src="@drawable/scissors" />
+    
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nameApp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/loginF_tvWelcome_marginTop"
+        android:text="@string/loginF_welcome"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/loginF_tvWelcome_textSize" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginF_edt_usernameLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/loginF_edtUsername_width"
+        android:layout_height="@dimen/loginF_edtUsername_height"
+        app:layout_constraintTop_toTopOf="@+id/tv_welcome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/loginF_edtUsername_marginTop"
+        app:boxCornerRadiusTopStart="@dimen/loginF_edtUsername_radius"
+        app:boxCornerRadiusTopEnd="@dimen/loginF_edtUsername_radius"
+        app:boxCornerRadiusBottomEnd="@dimen/loginF_edtUsername_radius"
+        app:boxCornerRadiusBottomStart="@dimen/loginF_edtUsername_radius"
+        app:boxStrokeColor="@color/blue_icon"
+        android:hint="@string/loginF_username"
+        app:hintTextColor="@color/gray_text"
+        app:startIconDrawable="@drawable/login_user"
+        app:startIconTint="@color/blue_icon"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginF_edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           android:inputType="text"
+            android:textColor="@color/black"
+           android:maxLines="1"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginF_edt_passwordLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/loginF_edtUsername_width"
+        android:layout_height="@dimen/loginF_edtUsername_height"
+        app:layout_constraintTop_toBottomOf="@+id/loginF_edt_usernameLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/loginF_edtPass_marginTop"
+        app:boxCornerRadiusTopStart="@dimen/loginF_edtUsername_radius"
+        app:boxCornerRadiusTopEnd="@dimen/loginF_edtUsername_radius"
+        app:boxCornerRadiusBottomEnd="@dimen/loginF_edtUsername_radius"
+        app:boxCornerRadiusBottomStart="@dimen/loginF_edtUsername_radius"
+        app:boxStrokeColor="@color/blue_icon"
+        android:hint="@string/loginF_password"
+        app:hintTextColor="@color/gray_text"
+        app:startIconDrawable="@drawable/login_password"
+        app:startIconTint="@color/blue_icon" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginF_edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/loginF_tv_forgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/loginF_edt_passwordLayout"
+        app:layout_constraintRight_toRightOf="@+id/loginF_edt_passwordLayout"
+        android:layout_marginTop="@dimen/loginF_tvForgotPass_marginTop"
+        android:text="@string/loginF_forgotPass"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="@dimen/loginF_tvForgotPass_textSize"
+        android:textColor="@color/blue_icon"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginF_cardView_login"
+        android:layout_width="@dimen/loginF_btnLogin_width"
+        android:layout_height="@dimen/loginF_btnLogin_height"
+        app:layout_constraintTop_toBottomOf="@id/loginF_tv_forgotPass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/loginF_btnLogin_marginTop"
+        app:cardCornerRadius="@dimen/loginF_btnLogin_radius"
+        android:backgroundTint="@color/blue_login" >
+
+        <TextView
+            android:id="@+id/loginF_tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center"
+            android:text="@string/loginF_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/loginF_btnLogin_textSize" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/loginF_imv_barber"
+        android:layout_width="@dimen/loginF_imvBarber_width"
+        android:layout_height="@dimen/loginF_imvBarber_height"
+        app:layout_constraintTop_toTopOf="@+id/loginF_cardView_login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/baber_login_preview"/>
+
+    <TextView
+        android:id="@+id/loginF_tv_checkRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/loginF_imv_barber"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/loginF_checkRes"
+        android:layout_marginTop="@dimen/loginF_tvCheckRes_marginTop"
+        android:gravity="center"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/loginF_tvCheckRes_textSize"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/loginF_tv_checkRes"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/loginF_res"
+        android:layout_marginTop="@dimen/loginF_tvRes_marginTop"
+        android:gravity="center"
+        android:textColor="@color/blue_icon"
+        android:textSize="@dimen/loginF_tvRes_textSize"
+        android:fontFamily="@font/roboto_medium"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

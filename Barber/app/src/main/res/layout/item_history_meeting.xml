@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="175dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/historyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Thông tin đặt lịch"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/history_tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/historyTitle"
+            app:layout_constraintLeft_toLeftOf="@+id/historyTitle"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Ngày : 06/05/2022"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/history_tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/history_tv_day"
+            app:layout_constraintLeft_toLeftOf="@+id/history_tv_day"
+            android:layout_marginTop="10dp"
+            android:text="Giờ : 17:30"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/history_tv_nameHairdresser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/history_tv_hour"
+            app:layout_constraintLeft_toLeftOf="@+id/history_tv_hour"
+            android:layout_marginTop="10dp"
+            android:text="Thợ cắt : Nguyễn Quốc Huy"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/history_tv_addressStore"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/history_tv_nameHairdresser"
+            app:layout_constraintLeft_toLeftOf="@+id/history_tv_nameHairdresser"
+            android:layout_marginTop="10dp"
+            android:text="Địa chỉ: 382 Nguyễn Trãi, Thanh Xuân Trung, Thanh Xuân, Hà Nội"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/orderState_tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/orderStateItemImv"
+        android:textSize="14sp"
+        android:textColor="@color/gray_text"
+        android:text="Chờ xác nhận"
+        />
+
+
+    <ImageView
+        android:id="@+id/orderStateItemImv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/add_cart"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/orderStateItem_nameProduct"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Máy sấy tóc tạo kiểu chuyên nghiệp Sharkway Limited 1600W"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/orderStateItemImv"
+        app:layout_constraintLeft_toRightOf="@+id/orderStateItemImv"/>
+
+    <TextView
+        android:id="@+id/orderStateItem_priceProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="150,000 vnd"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintTop_toBottomOf="@+id/orderStateItem_nameProduct"
+        app:layout_constraintLeft_toLeftOf="@+id/orderStateItem_nameProduct"/>
+
+    <TextView
+        android:id="@+id/orderStateItem_countProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 sản phẩm"
+        android:textColor="@color/gray_text"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintTop_toBottomOf="@+id/orderStateItem_priceProduct"
+        app:layout_constraintLeft_toLeftOf="@+id/orderStateItem_nameProduct"/>
+
+    <TextView
+        android:id="@+id/orderStateItem_totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="bottom|right"
+        android:text="Thành tiền : 140,000 vnd"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/orderStateItem_countProduct"
+        app:layout_constraintTop_toBottomOf="@+id/orderStateItem_countProduct" />
+
+    <ImageView
+        android:id="@+id/orderStateItem_imvDes"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="@+id/orderStateItem_nameProduct"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/cancel"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

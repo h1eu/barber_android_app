@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.Home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/homeF_imv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/account"/>
+
+    <TextView
+        android:id="@+id/homeF_tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/homeF_imv_account"
+        app:layout_constraintLeft_toRightOf="@+id/homeF_imv_account"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Account"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/home_fragment_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeF_layout_barberMeeting"
+                android:layout_width="80dp"
+                android:layout_height="105dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp">
+            <ImageView
+                    android:id="@+id/homeF_imv_barberMeeting"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:src="@drawable/dat_lich_cat_toc"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="Đặt lịch cắt"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeF_layout_hairdresser"
+            android:layout_width="80dp"
+            android:layout_height="105dp"
+            app:layout_constraintTop_toTopOf="@+id/homeF_layout_barberMeeting"
+            app:layout_constraintLeft_toRightOf="@+id/homeF_layout_barberMeeting"
+            android:layout_marginLeft="55dp">
+
+            <ImageView
+                android:id="@+id/homeF_imv_hairdresser"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/tho_cat"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Thợ cắt"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeF_layout_historyMeeting"
+            android:layout_width="80dp"
+            android:layout_height="105dp"
+            app:layout_constraintTop_toTopOf="@+id/homeF_layout_barberMeeting"
+            app:layout_constraintLeft_toRightOf="@+id/homeF_layout_hairdresser"
+            android:layout_marginLeft="55dp">
+            <ImageView
+                android:id="@+id/homeF_imv_historyMeeting"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/lich_cat"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Lịch cắt"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeF_layout_info"
+            android:layout_width="80dp"
+            android:layout_height="105dp"
+            app:layout_constraintTop_toBottomOf="@+id/homeF_layout_barberMeeting"
+            app:layout_constraintLeft_toLeftOf="@+id/homeF_layout_barberMeeting"
+            android:layout_marginTop="20dp">
+            <ImageView
+                android:id="@+id/homeF_imv_info"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/gioi_thieu"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Giới thiệu"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeF_layout_priceList"
+            android:layout_width="80dp"
+            android:layout_height="105dp"
+            app:layout_constraintTop_toTopOf="@+id/homeF_layout_info"
+            app:layout_constraintLeft_toLeftOf="@+id/homeF_layout_hairdresser">
+            <ImageView
+                android:id="@+id/homeF_imv_priceList"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/bang_gia"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Bảng giá"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeF_layout_feedback"
+            android:layout_width="80dp"
+            android:layout_height="105dp"
+            app:layout_constraintTop_toTopOf="@+id/homeF_layout_info"
+            app:layout_constraintLeft_toLeftOf="@+id/homeF_layout_historyMeeting">
+            <ImageView
+                android:id="@+id/homeF_imv_feedback"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/phan_hoi"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Phản hồi"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/homeF_tv_postPopular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/homeF_layout_info"
+            app:layout_constraintLeft_toLeftOf="@+id/homeF_layout_info"
+            android:layout_marginTop="10dp"
+            android:text="Bài viết phổ biến"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homeF_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintTop_toBottomOf="@+id/homeF_tv_postPopular"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Barber</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Login Fragment -->
+    <string name="loginF_welcome">Chào mừng bạn đến với Barber</string>
+    <string name="loginF_username">Tên tài khoản</string>
+    <string name="loginF_password">Mật khẩu</string>
+    <string name="loginF_forgotPass">Quên mật khẩu ?</string>
+    <string name="loginF_login">Đăng nhập</string>
+    <string name="loginF_checkRes">Bạn chưa có tài khoản ?</string>
+    <string name="loginF_res">Đăng ký ngay</string>
+
+    <!-- Register Fragment -->
+    <string name="registerF_createAcc">Tạo tài khoản</string>
+    <string name="registerF_name">Họ và tên</string>
+    <string name="registerF_phone">Số điện thoại</string>
+    <string name="registerF_comfirmPass">Nhập lại mật khẩu</string>
+    <string name="registerF_register">Đăng ký</string>
+    <string name="registerF_checkLogin">Bạn đã có tài khoản ?</string>
+    <string name="registerF_login">Đăng nhập ngay</string>
+    <string name="registerF_questionPass">Con vật bạn yêu thích ?</string>
+
+    <!-- forgot password -->
+    <string name="forgotPassF_forgotPass">Quên mật khẩu</string>
+    <string name="forgotPassF_check">Kiểm tra</string>
+    <string name="forgotPassF_resetPass">Đặt lại mật khẩu</string>
+    <string name="forgotPassF_passNew">Nhập mật khẩu mới</string>
+    <string name="forgotPassF_comfirmPassNew">Nhập lại mật khẩu mới</string>
+    <string name="forgotPassF_comfrim">Xác nhận</string>
+
+
+</resources>

@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loadingFragment">
+
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.example.barber.Fragment.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.barber.Fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.barber.Fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_verifyAccountFragment"
+            app:destination="@id/verifyAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.barber.Fragment.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_barberMeetingFragment"
+            app:destination="@id/barberMeetingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_priceListFragment"
+            app:destination="@id/priceListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_feedBackFragment"
+            app:destination="@id/feedBackFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_hairdresserListFragment"
+            app:destination="@id/hairdresserListFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_historyMeetingFragment"
+            app:destination="@id/historyMeetingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewOnePostFragment"
+            app:destination="@id/viewOnePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/knowledgeFragment"
+        android:name="com.example.barber.Fragment.Knowledge.KnowledgeFragment"
+        android:label="fragment_knowledge"
+        tools:layout="@layout/fragment_knowledge" >
+        <action
+            android:id="@+id/action_knowledgeFragment_to_viewOnePostFragment"
+            app:destination="@id/viewOnePostFragment" />
+        <action
+            android:id="@+id/action_knowledgeFragment_to_youNeedFragment"
+            app:destination="@id/youNeedFragment" />
+        <action
+            android:id="@+id/action_knowledgeFragment_to_hairTrendingFragment"
+            app:destination="@id/hairTrendingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.example.barber.Fragment.Store.StoreFragment"
+        android:label="fragment_store"
+        tools:layout="@layout/fragment_store" >
+        <action
+            android:id="@+id/action_storeFragment_to_getProductByTypeFragment"
+            app:destination="@id/getProductByTypeFragment" />
+        <action
+            android:id="@+id/action_storeFragment_to_searchStoreFragment"
+            app:destination="@id/searchStoreFragment" />
+        <action
+            android:id="@+id/action_storeFragment_to_viewFullOneProductFragment"
+            app:destination="@id/viewFullOneProductFragment" />
+        <action
+            android:id="@+id/action_storeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_storeFragment_to_listOrderFragment"
+            app:destination="@id/listOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.barber.Fragment.Search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_jobFragment"
+            app:destination="@id/jobFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_blogFragment"
+            app:destination="@id/blogFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_viewOnePostFragment"
+            app:destination="@id/viewOnePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.barber.Fragment.User.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment_to_infoAccFragment"
+            app:destination="@id/infoAccFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_changePassFragment"
+            app:destination="@id/changePassFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_storeListFragment"
+            app:destination="@id/storeListFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/barberMeetingFragment"
+        android:name="com.example.barber.Fragment.Home.BarberMeetingFragment"
+        android:label="fragment_barber_meeting"
+        tools:layout="@layout/fragment_barber_meeting" >
+        <action
+            android:id="@+id/action_barberMeetingFragment_to_historyMeetingFragment"
+            app:destination="@id/historyMeetingFragment" />
+        <action
+            android:id="@+id/action_barberMeetingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.barber.Fragment.Home.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/priceListFragment"
+        android:name="com.example.barber.Fragment.Home.PriceListFragment"
+        android:label="fragment_price_list"
+        tools:layout="@layout/fragment_price_list" >
+        <action
+            android:id="@+id/action_priceListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_priceListFragment_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/priceListMenFragment"
+        android:name="com.example.barber.Fragment.Home.PriceListMenFragment"
+        android:label="fragment_price_list_men"
+        tools:layout="@layout/fragment_price_list_men" >
+        <action
+            android:id="@+id/action_priceListMenFragment_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/priceListServiceFragment"
+        android:name="com.example.barber.Fragment.Home.PriceListWomenFragment"
+        android:label="fragment_price_list_service"
+        tools:layout="@layout/fragment_price_list_service" >
+        <action
+            android:id="@+id/action_priceListServiceFragment_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/aboutBarberFragment">
+        <fragment
+            android:id="@+id/aboutBarberFragment"
+            android:name="com.example.barber.Fragment.User.Support.AboutBarberFragment"
+            android:label="fragment_about_barber"
+            tools:layout="@layout/fragment_about_barber" />
+    </navigation>
+    <fragment
+        android:id="@+id/changePassFragment"
+        android:name="com.example.barber.Fragment.User.ChangePassFragment"
+        android:label="fragment_change_pass"
+        tools:layout="@layout/fragment_change_pass" >
+        <action
+            android:id="@+id/action_changePassFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hairTrendingFragment"
+        android:name="com.example.barber.Fragment.Knowledge.HairTrendingFragment"
+        android:label="fragment_hair_trending"
+        tools:layout="@layout/fragment_hair_trending" >
+        <action
+            android:id="@+id/action_hairTrendingFragment_to_viewOnePostFragment"
+            app:destination="@id/viewOnePostFragment" />
+        <action
+            android:id="@+id/action_hairTrendingFragment_to_knowledgeFragment"
+            app:destination="@id/knowledgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutBarberFragment2"
+        android:name="com.example.barber.Fragment.User.Support.AboutBarberFragment"
+        android:label="fragment_about_barber"
+        tools:layout="@layout/fragment_about_barber" >
+        <action
+            android:id="@+id/action_aboutBarberFragment2_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_aboutBarberFragment2_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedBackFragment"
+        android:name="com.example.barber.Fragment.Home.FeedBackFragment"
+        android:label="fragment_feed_back"
+        tools:layout="@layout/fragment_feed_back" >
+        <action
+            android:id="@+id/action_feedBackFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hairdresserListFragment"
+        android:name="com.example.barber.Fragment.Home.HairdresserListFragment"
+        android:label="fragment_hairdresser_list"
+        tools:layout="@layout/fragment_hairdresser_list" >
+        <action
+            android:id="@+id/action_hairdresserListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyMeetingFragment"
+        android:name="com.example.barber.Fragment.Home.HistoryMeetingFragment"
+        android:label="fragment_history_meeting"
+        tools:layout="@layout/fragment_history_meeting" >
+        <action
+            android:id="@+id/action_historyMeetingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoAccFragment"
+        android:name="com.example.barber.Fragment.User.InfoAccFragment"
+        android:label="fragment_info_acc"
+        tools:layout="@layout/fragment_info_acc" >
+        <action
+            android:id="@+id/action_infoAccFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoSecurityFragment"
+        android:name="com.example.barber.Fragment.User.Support.InfoSecurityFragment"
+        android:label="fragment_info_security"
+        tools:layout="@layout/fragment_info_security" >
+        <action
+            android:id="@+id/action_infoSecurityFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_infoSecurityFragment_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.example.barber.Fragment.Search.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" >
+        <action
+            android:id="@+id/action_jobFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_jobFragment_to_viewOnePostFragment"
+            app:destination="@id/viewOnePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogFragment"
+        android:name="com.example.barber.Fragment.Search.LookBookFragment"
+        android:label="fragment_blog"
+        tools:layout="@layout/fragment_blog" >
+        <action
+            android:id="@+id/action_blogFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_blogFragment_to_viewOnePostFragment"
+            app:destination="@id/viewOnePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesBarberFragment"
+        android:name="com.example.barber.Fragment.User.Support.ServicesBarberFragment"
+        android:label="fragment_services_barber"
+        tools:layout="@layout/fragment_services_barber" >
+        <action
+            android:id="@+id/action_servicesBarberFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_servicesBarberFragment_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeListFragment"
+        android:name="com.example.barber.Fragment.User.StoreListFragment"
+        android:label="fragment_store_list"
+        tools:layout="@layout/fragment_store_list" >
+        <action
+            android:id="@+id/action_storeListFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.example.barber.Fragment.User.Support.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" >
+        <action
+            android:id="@+id/action_supportFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_servicesBarberFragment"
+            app:destination="@id/servicesBarberFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_aboutBarberFragment2"
+            app:destination="@id/aboutBarberFragment2" />
+        <action
+            android:id="@+id/action_supportFragment_to_tradingConditionFragment"
+            app:destination="@id/tradingConditionFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_infoSecurityFragment"
+            app:destination="@id/infoSecurityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tradingConditionFragment"
+        android:name="com.example.barber.Fragment.User.Support.TradingConditionFragment"
+        android:label="fragment_trading_condition"
+        tools:layout="@layout/fragment_trading_condition" >
+        <action
+            android:id="@+id/action_tradingConditionFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_tradingConditionFragment_to_viewOnePostNoImgFragment"
+            app:destination="@id/viewOnePostNoImgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/youNeedFragment"
+        android:name="com.example.barber.Fragment.Knowledge.YouNeedFragment"
+        android:label="fragment_you_need"
+        tools:layout="@layout/fragment_you_need" >
+        <action
+            android:id="@+id/action_youNeedFragment_to_viewOnePostFragment"
+            app:destination="@id/viewOnePostFragment" />
+        <action
+            android:id="@+id/action_youNeedFragment_to_knowledgeFragment"
+            app:destination="@id/knowledgeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyAccountFragment"
+        android:name="com.example.barber.Fragment.VerifyAccountFragment"
+        android:label="fragment_verify_account"
+        tools:layout="@layout/fragment_verify_account" >
+        <action
+            android:id="@+id/action_verifyAccountFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.barber.Fragment.Store.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_viewFullOneProductFragment"
+            app:destination="@id/viewFullOneProductFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_getProductByTypeFragment"
+            app:destination="@id/getProductByTypeFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.example.barber.Fragment.Store.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" >
+        <action
+            android:id="@+id/action_orderFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_orderFragment_to_listOrderFragment"
+            app:destination="@id/listOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchStoreFragment"
+        android:name="com.example.barber.Fragment.Store.SearchStoreFragment"
+        android:label="fragment_search_store"
+        tools:layout="@layout/fragment_search_store" >
+        <action
+            android:id="@+id/action_searchStoreFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_searchStoreFragment_to_viewFullOneProductFragment"
+            app:destination="@id/viewFullOneProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.barber.Fragment.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/getProductByTypeFragment"
+        android:name="com.example.barber.Fragment.Store.GetProductByTypeFragment"
+        android:label="fragment_get_product_by_type"
+        tools:layout="@layout/fragment_get_product_by_type" >
+        <action
+            android:id="@+id/action_getProductByTypeFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_getProductByTypeFragment_to_viewFullOneProductFragment"
+            app:destination="@id/viewFullOneProductFragment" />
+        <action
+            android:id="@+id/action_getProductByTypeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFullOneProductFragment"
+        android:name="com.example.barber.Fragment.Store.ViewFullOneProductFragment"
+        android:label="fragment_view_full_one_product"
+        tools:layout="@layout/fragment_view_full_one_product" >
+        <action
+            android:id="@+id/action_viewFullOneProductFragment_to_getProductByTypeFragment"
+            app:destination="@id/getProductByTypeFragment" />
+        <action
+            android:id="@+id/action_viewFullOneProductFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_viewFullOneProductFragment_to_searchStoreFragment"
+            app:destination="@id/searchStoreFragment" />
+        <action
+            android:id="@+id/action_viewFullOneProductFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listOrderFragment"
+        android:name="com.example.barber.Fragment.Store.ListOrderFragment"
+        android:label="fragment_list_order"
+        tools:layout="@layout/fragment_list_order" >
+        <action
+            android:id="@+id/action_listOrderFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_listOrderFragment_to_viewOrderFragment"
+            app:destination="@id/viewOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderComfirmFragment"
+        android:name="com.example.barber.Fragment.Store.OrderComfirmFragment"
+        android:label="fragment_order_comfirm"
+        tools:layout="@layout/fragment_order_comfirm" />
+    <fragment
+        android:id="@+id/orderDestroyFragment"
+        android:name="com.example.barber.Fragment.Store.OrderDestroyFragment"
+        android:label="fragment_order_destroy"
+        tools:layout="@layout/fragment_order_destroy" />
+    <fragment
+        android:id="@+id/orderWaitFragment"
+        android:name="com.example.barber.Fragment.Store.OrderWaitFragment"
+        android:label="fragment_order_wait"
+        tools:layout="@layout/fragment_order_wait" />
+    <fragment
+        android:id="@+id/viewOnePostFragment"
+        android:name="com.example.barber.Fragment.Home.ViewOnePostFragment"
+        android:label="fragment_view_one_post"
+        tools:layout="@layout/fragment_view_one_post" >
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_youNeedFragment"
+            app:destination="@id/youNeedFragment" />
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_youNeedFragment2"
+            app:destination="@id/youNeedFragment" />
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_knowledgeFragment"
+            app:destination="@id/knowledgeFragment" />
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_hairTrendingFragment"
+            app:destination="@id/hairTrendingFragment" />
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_jobFragment"
+            app:destination="@id/jobFragment" />
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_blogFragment"
+            app:destination="@id/blogFragment" />
+        <action
+            android:id="@+id/action_viewOnePostFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewOnePostNoImgFragment"
+        android:name="com.example.barber.Fragment.Home.ViewOnePostNoImgFragment"
+        android:label="fragment_view_one_post_no_img"
+        tools:layout="@layout/fragment_view_one_post_no_img" >
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_priceListMenFragment"
+            app:destination="@id/priceListMenFragment" />
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_priceListServiceFragment"
+            app:destination="@id/priceListServiceFragment" />
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_priceListFragment"
+            app:destination="@id/priceListFragment" />
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_infoSecurityFragment"
+            app:destination="@id/infoSecurityFragment" />
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_aboutBarberFragment2"
+            app:destination="@id/aboutBarberFragment2" />
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_tradingConditionFragment"
+            app:destination="@id/tradingConditionFragment" />
+        <action
+            android:id="@+id/action_viewOnePostNoImgFragment_to_servicesBarberFragment"
+            app:destination="@id/servicesBarberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewOrderFragment"
+        android:name="com.example.barber.Fragment.Store.ViewOrderFragment"
+        android:label="fragment_view_order"
+        tools:layout="@layout/fragment_view_order" >
+        <action
+            android:id="@+id/action_viewOrderFragment_to_listOrderFragment"
+            app:destination="@id/listOrderFragment" />
+    </fragment>
+</navigation>

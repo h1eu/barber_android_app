@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_login"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.Home.ViewOnePostNoImgFragment">
+
+    <ImageView
+        android:id="@+id/viewPostNoF_imv_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/arrow_back_white"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/viewPostNoF_imv_back"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:gravity="center"
+        android:text="Xem bài viết"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_medium"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/home_fragment_background"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/viewPostNoF_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Barber Hair Salon là ai ?"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/viewPostNoF_tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto_regular"
+                />
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
